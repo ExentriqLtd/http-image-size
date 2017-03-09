@@ -51,5 +51,7 @@ module.exports = function(imgUrl, done) {
       }
       done(null, dimensions, buffer.length);
     });
+  }).on('error', function(err) {
+    done(err);
   });
 };
